@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <title>CROWNEST</title>
+    <style>
+        section {
+            display: none;
+        }
+        .activa {
+            display: block;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+ <header>
         <div class="container">
          <img src="https://raw.githubusercontent.com/7VALHALLA7/PRE-CROW-S-NEST/main/upscalemedia-transformed.png" 
          width="450" 
@@ -18,18 +26,34 @@
          </nav>   
         </div>      
     </header>
-    <div class="container">
+
         <p> CURSOS </p>
-        <img src="https://raw.githubusercontent.com/7VALHALLA7/PRE-CROW-S-NEST/main/ESPE.png" 
-        width="350" height="400"
-         alt=" nada">
-         <img src="https://raw.githubusercontent.com/7VALHALLA7/PRE-CROW-S-NEST/main/logo-epn-vertical.png" 
-        width="350" height="400"
-         alt=" nada">
-         <img src="https://raw.githubusercontent.com/7VALHALLA7/PRE-CROW-S-NEST/main/uce.png" 
-        width="350" height="400"
-         alt=" nada">
-         </div>
+        <div>
+           <img src="https://raw.githubusercontent.com/7VALHALLA7/PRE-CROW-S-NEST/main/ESPE.png" 
+            width="350" height="400"
+            alt=" pagina1" onclick=" mostrarseccion ('pagina1') ">
+           <img src="https://raw.githubusercontent.com/7VALHALLA7/PRE-CROW-S-NEST/main/logo-epn-vertical.png" 
+            width="350" height="400"
+             alt=" nada">
+           <img src="https://raw.githubusercontent.com/7VALHALLA7/PRE-CROW-S-NEST/main/uce.png" 
+            width="350" height="400"
+             alt=" nada">
+        </div>
+        <div id="pagina1" class="seccion activa">
+            <h2>ESPE</h2>
+        </div>
+        <script>
+            function mostrarseccion(id) {
+                const secciones =
+                document. querySelectorALL(' .seccion');
+                secciones.forEach(seccion => 
+                seccion.classlist.remove('activa')) ;
+                document .getElementById(id).classList.add('activa');
+                
+            }
+        </script>
+
+    
     <footer>
         <div class="container">
             <p>&copy; CROW'S NEST 2025</p>
